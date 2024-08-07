@@ -1,0 +1,32 @@
+#!/bin/bash
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('uptime')
+        {
+            steps{
+                sh 'uptime'
+            }
+        }
+        stage('hostname')
+        {
+            steps{
+                sh 'hostname'
+            }
+        }
+       stage('ip address')
+        {
+            steps{
+                sh 'hostname -I'
+            }
+        }
+        stage('cpu time')
+        {
+            steps{
+                sh 'lscpu'
+            }
+        }
+    }
+}
