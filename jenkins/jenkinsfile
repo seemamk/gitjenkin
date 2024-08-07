@@ -1,7 +1,10 @@
 #!/bin/bash
 pipeline
 {
-    agent any
+    agent 
+    {
+	    label 'Node-1'
+    }
     stages
     {
         stage('uptime')
