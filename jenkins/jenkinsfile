@@ -1,5 +1,4 @@
 #!/bin/bash
-#added logs
 pipeline
 {
     agent any
